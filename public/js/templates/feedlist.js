@@ -1,0 +1,3 @@
+app.templates = app.templates || {};
+
+app.templates['listitem'] = new Hogan.Template(function(c,p,i){var _=this;_.b(i=i||"");_.b("<li class=\"feedlist-item\"> \r");_.b("\n" + i);_.b("	<p>\r");_.b("\n" + i);_.b("	<button class=\"btn btn-list-remove\">\r");_.b("\n" + i);_.b("	<span class=\"glyphicon glyphicon-remove\"></span>\r");_.b("\n" + i);_.b("	</button>\r");_.b("\n" + i);_.b("	<a href=\"lists/");_.b(_.v(_.f("id",c,p,0)));_.b("\" class=\"feedlist-item--name btn btn-default\">");_.b(_.v(_.f("name",c,p,0)));_.b("</a>	\r");_.b("\n" + i);_.b("	</p>\r");_.b("\n" + i);_.b("	<input type=\"hidden\" value=\"");_.b(_.v(_.f("id",c,p,0)));_.b("\" class=\"feedlist-item--id\">\r");_.b("\n" + i);_.b("</li>");return _.fl();;});

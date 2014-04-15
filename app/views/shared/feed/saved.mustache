@@ -1,0 +1,25 @@
+<div class="col-lg-11">
+	<div class="feed-item row">
+		<button class="pin-theme btn btn-default col-xs-6 col-sm-7 col-md-9" style="border-color:{{ color }};">
+			<div class="glyphicon glyphicon-chevron-down feed-item--title-btn pull-left"></div>
+			<div class="media-body"> <h5 class="feed-item--name">{{ name }}</h5> </div>
+		</button>
+		<input type="hidden" value="{{ id }}" class="feed-item--id">
+		<input type="hidden" value="{{ feed.url }}" class="feed-item--url">
+		<input type="hidden" value="{{ color }}" class="feed-item--color">
+		<div class="btn-group btn-group-borderless col-xs-6 col-sm-5 col-md-3 feed-item--btn-bar">
+			<button class="btn btn-default btn-md" data-usr-action="addlist">
+				<span class="glyphicon glyphicon-add-list"></span>
+				<span class="sr-only">Add to list</span>
+			</button>
+			<button class="btn btn-default btn-md" data-usr-action="edit">
+				<span class="glyphicon glyphicon-pencil"></span>
+				<span class="sr-only">Edit feed</span>
+			</button>
+			<button class="btn btn-default btn-md btn-list-remove" data-usr-action="unpin">
+				<span class="glyphicon glyphicon-remove"></span>
+				<span class="sr-only">Unpin Feed</span>
+			</button>
+		</div>
+	</div>
+</div>

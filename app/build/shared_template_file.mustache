@@ -1,0 +1,5 @@
+app.templates = app.templates || {};
+
+{{#templates}}
+app.templates['{{name}}'] = new Hogan.Template({{{body}}});
+{{/templates}}

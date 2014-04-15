@@ -1,0 +1,8 @@
+<div class="checkbox picklist--item {{#full}}picklist--item-full{{/full}}">
+	<label>
+	  <input type="checkbox"{{#full}}disabled{{/full}}>
+	  <span class="picklist--list-name">{{ name }}</span>
+	  {{#full}}<span class="label label-warning">Full</span>{{/full}}
+	</label>
+	<input type="hidden" class="picklist--list-id" value="{{ id }}">
+</div>
