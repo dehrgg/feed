@@ -55,12 +55,12 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 				return $pin;
 			}
 			else {
-				$error = 'User has reached maximum number of pins';
+				$error = 'Only '. self::MAX_FEEDS . ' feeds can be pinned at one time';
 				return false;
 			}
 		}
 		else {
-			$error = 'User has already pinned the specified feed';
+			$error = 'That feed is already pinned';
 			return false;
 		}
 	}

@@ -169,8 +169,15 @@ class FeedlistController extends BaseController {
 				if (!$feed->exists) {
 					$feed->save();
 				}
-				$list->addFeed($feed, array('alias' => $alias));
-				$this->setStatus(static::STATUS_SUCCESS);
+				$message = '';
+				$success = $list->addFeed($feed, array('alias' => $alias), $message);
+				if ($success) {
+					$this->setStatus(static::STATUS_SUCCESS);
+				}
+				else {
+					$this->setStatus(static::STATUS_ERROR);
+					$this->setMessage($message);
+				}				
 			}
 			else {
 				$this->setStatus(static::STATUS_ERROR);
