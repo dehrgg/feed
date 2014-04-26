@@ -26,8 +26,6 @@
 <!-- Page setup -->
 <script type="text/javascript">
 google.setOnLoadCallback(function(){
-  console.log("onload running");
-  // $(document).ready(function(){
   var feedProvider = new GoogleFeedProvider();
   var searchView = new app.views.Search({
     el: $(app.selectors.content),
@@ -39,6 +37,5 @@ google.setOnLoadCallback(function(){
     picklist.open();
   });
 });
-// });
 </script>
 @stop
