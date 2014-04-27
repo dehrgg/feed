@@ -24,6 +24,15 @@
   @include('core.navigation', array('active' => 'portfolio'))
   @include('core.demonav')
   
+  <div class="modal fade" id ="ajax-modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog ajax-dialog">
+      <div class="modal-content ajax-content">
+        <div class="modal-body">
+          <img src="{{ asset('img/ajax.gif') }}"> <span class="ajax-message"> </span>
+        </div>
+      </div>
+    </div>
+  </div>
   @yield('outer-content')
 
   <div class="container-fluid">

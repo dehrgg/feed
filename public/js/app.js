@@ -1,3 +1,7 @@
+$(document).ready(function(){
+	app.start();
+});
+
 window.app = (function() {
 	
 	var app = {};
@@ -28,6 +32,33 @@ window.app = (function() {
 	app.stripHTML = function(text, allowBold) {
 		var tagRegex = (allowBold === true) ? /<\/?[^b>]>|<\/?[^>\/]{2,}>/g : /<\/?[^>]*>/g;
 		return text.replace(tagRegex, '');
+	};
+
+	var ajaxMessage = '';
+	var ajaxSpinner = $('#ajax-modal');
+
+	app.start = function() {
+		$(document)
+			.ajaxStart(function () {
+				var dialog = $('.ajax-dialog', ajaxSpinner);
+				var message = $('.ajax-message', ajaxSpinner);
+				dialog.css('width', 'auto');
+				ajaxSpinner.css('display', 'block');
+				message.text(ajaxMessage);
+				(ajaxMessage) ? message.removeClass('hide') : message.addClass('hide');
+				dialog.css('width', $('.ajax-content').outerWidth());
+				ajaxSpinner.modal({
+					backdrop: 'static'
+				});
+			})
+			.ajaxStop(function () {
+				ajaxSpinner.modal('hide');
+				ajaxMessage = '';
+			});
+	};
+
+	app.setAjaxMessage = function(message) {
+		ajaxMessage = message;
 	};
 
 	return app;
@@ -91,7 +122,7 @@ app.views.PreRenderedList = Backbone.View.extend({
 		var element = $(attr.select, source);
 		var getValue = element[func];
 		var value = getValue.apply(element, attr.args);
-		if (attr.integer === true) return parseInt(value);
+		if (attr.integer === true) return parseInt(value, 10);
 		return (attr.trim === false) ? value : $.trim(value);
 	},
 

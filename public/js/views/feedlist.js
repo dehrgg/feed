@@ -30,7 +30,8 @@ app.views.Feedlists = app.views.PreRenderedList.extend({
 		var input = this.$('#name-input');
 		var name = input.val().trim();
 		input.val('');
-		this.collection.create({ name: name });
+		app.setAjaxMessage('Creating list');
+		this.collection.create({ name: name }, { wait: true });
 	},
 
 	newItemView: function(model, el){
@@ -98,9 +99,7 @@ app.views.FeedlistItem = Backbone.View.extend({
 
 	deleteModel: function(){
 		var deleteComplete = $.proxy(this.deleteComplete, this);
-		this.model.destroy().done(deleteComplete);
+		app.setAjaxMessage('Deleting list');
+		this.model.destroy({ wait: true });
 	},
-
-	deleteComplete: function(data){
-	}
 });

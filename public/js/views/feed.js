@@ -78,17 +78,21 @@ app.views.Feed = Backbone.View.extend({
 
 	pinFeed: function() {
 		this.model.set({'name': app.stripHTML(this.model.get('name'))});
-		console.log("Pinning: " + this.model.url());
+		app.setAjaxMessage('Pinning feed');
 		this.model.save().done($.proxy(this.pinComplete, this));
 	},
 
 	unpinFeed: function() {
-		this.model.destroy();
+		this.model.destroy({wait: true});
 	},
 
 	pinComplete: function(data){
-		// console.log(data);
-		// console.log("Pin was successful" + this.model.url);
+		if (data.status == 'success') {
+			alert('Feed pinned successfully');
+		}
+		else if (data.status == 'error') {
+			alert(data.message);
+		}
 	},
 
 	openPicklist: function(){
