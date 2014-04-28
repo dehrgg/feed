@@ -12,11 +12,11 @@ return array(
 	| that are included on basically every request into the application.
 	|
 	*/
-	'app/models/BaseModel.php',
-	'app/models/Feedlist.php',
-	'app/models/Pin.php',
-	'app/models/User.php',
-	'app/providers/GuestServiceProvider.php',
-	'app/controllers/BaseController.php'
+	'App/Models/BaseModel.php',
+	'App/Models/Feedlist.php',
+	'App/Models/Pin.php',
+	'App/Models/User.php',
+	'App/Providers/GuestServiceProvider.php',
+	'App/Controllers/BaseController.php'
 
 );
