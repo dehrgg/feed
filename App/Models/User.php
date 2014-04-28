@@ -28,13 +28,11 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 * Return the lists that belong to this user
 	 * @return HasMany
 	 */
-	public function feedlists()
-	{
+	public function feedlists() {
 		return $this->hasMany('App\Models\Feedlist');
 	}
 
-	public function pins()
-	{
+	public function pins() {
 		return $this->hasMany('App\Models\Pin');
 	}
 
@@ -78,8 +76,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 *
 	 * @return mixed
 	 */
-	public function getAuthIdentifier()
-	{
+	public function getAuthIdentifier() {
 		return $this->getKey();
 	}
 
@@ -88,8 +85,7 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getAuthPassword()
-	{
+	public function getAuthPassword() {
 		return $this->password;
 	}
 
@@ -98,8 +94,19 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 *
 	 * @return string
 	 */
-	public function getReminderEmail()
-	{
+	public function getReminderEmail() {
 		return $this->email;
+	}
+
+	public function getRememberToken() {
+	    return $this->remember_token;
+	}
+
+	public function setRememberToken($value) {
+	    $this->remember_token = $value;
+	}
+
+	public function getRememberTokenName() {
+	    return 'remember_token';
 	}
 }

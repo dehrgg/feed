@@ -17,6 +17,7 @@ class CreateInitialSchema extends Migration {
 			$table->string('email', 128);
 			$table->string('password', 255);
 			$table->boolean('active')->default(false);
+			$table->string('remember_token', 100);
 			$table->timestamps();
 		});
 
