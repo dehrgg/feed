@@ -163,14 +163,14 @@ class FeedlistController extends BaseController {
 		$user = App::make('user.current');
 		if ($list) {
 			$url = Input::get('url');
-			$alias = Input::get('name');
+			$name = Input::get('name');
 			$feed = Feed::firstOrNew(array('url' => $url));
 			if ($feed->validate()) {
 				if (!$feed->exists) {
 					$feed->save();
 				}
 				$message = '';
-				$success = $list->addFeed($feed, array('alias' => $alias), $message);
+				$success = $list->addFeed($feed, array('name' => $name), $message);
 				if ($success) {
 					$this->setStatus(static::STATUS_SUCCESS);
 				}
