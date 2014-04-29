@@ -32,14 +32,14 @@ Class Feedlist extends BaseModel {
 			$error = 'A list can only have '. MAX_FEEDS .' feeds';
 			return false;
 		}
-		if ($this->user->pinFeed($feed, $pivot, $error)) {
-			$pin = Pin::where('user_id', $this->user->id)
-					->where('feed_id', $feed->id)
-					->first();
+		$pin = $this->user->pinFeed($feed, $pivot, $error);
+		if ($pin) {
 			$this->pins()->attach($pin);
 			return true;
+		}
+		else {
+			return false;
 		}		
-		return false;
 	}
 
 	public function isFull() {

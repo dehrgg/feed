@@ -50,7 +50,6 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 				$pin->user()->associate($this);
 				$pin->feed()->associate($feed);
 				$pin->save();
-				return $pin;
 			}
 			else {
 				$error = 'Only '. self::MAX_FEEDS . ' feeds can be pinned at one time';
@@ -58,9 +57,11 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 			}
 		}
 		else {
-			$error = 'That feed is already pinned';
-			return false;
+			$pin = Pin::where('user_id', $this->id)
+					->where('feed_id', $feed->id)
+					->first();
 		}
+		return $pin;
 	}
 
 	public function unpin($pin) {
