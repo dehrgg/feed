@@ -59,14 +59,6 @@ $framework = $app['path.base'].'/vendor/laravel/framework/src';
 
 require $framework.'/Illuminate/Foundation/start.php';
 
-
-/*
-|--------------------------------------------------------------------------
-| Require custom boostrap files - dgibbs
-|--------------------------------------------------------------------------
- */
-require $app['path'].'/composers.php';
-
 /*
 |--------------------------------------------------------------------------
 | Return The Application
