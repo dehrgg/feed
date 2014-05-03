@@ -1,5 +1,5 @@
-<nav class="navbar navbar-default subnav" role="navigation" style="margin-top:-20px; border-top:none;">
- 	<div class="container-fluid">
+<nav class="navbar navbar-default subnav" role="navigation">
+ 	<!-- <div class="container-fluid"> -->
  		<ol class="breadcrumb pull-left nav-breadcrumb">
   			<li><a href="{{ $_ENV['PARENT_ROOT'] }}">Dehrg.com</a></li>
   			<li><a href="{{ $_ENV['PARENT_ROOT'] }}/portfolio/demos">Demos</a></li>
@@ -21,5 +21,5 @@
 				@endif
 			</div>
  		</div>
-	</div>
+	<!-- </div> -->
 </nav>

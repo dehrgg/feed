@@ -21,8 +21,7 @@
   
   <body>
 
-  @include('core.navigation', array('active' => 'portfolio'))
-  @include('core.demonav')
+  
   
   <div class="modal fade" id ="ajax-modal" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
     <div class="modal-dialog ajax-dialog">
@@ -36,6 +35,10 @@
   @yield('outer-content')
 
   <div class="container-fluid">
+    <div class="nav-wrapper">
+      @include('core.navigation', array('active' => 'portfolio'))
+      @include('core.demonav')
+    </div>
     <div class="row">
       <div class="col-sm-4 col-md-3 sidebar">
         @include('core.sidemenu')

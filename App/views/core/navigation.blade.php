@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default main-nav" role="navigation">
- 	<div class="container-fluid">
+ 	<!-- <div class="container-fluid"> -->
  		<div class="navbar-header">
  			<a class="navbar-brand" href="{{ $_ENV['PARENT_ROOT'] }}"><strong>Dylan Gibbs</strong></a>
  			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
@@ -28,5 +28,5 @@
 	 			</li>
 	 		</ul>
  		</div>
-	</div>
+	<!-- </div> -->
 </nav>
