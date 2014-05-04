@@ -25,10 +25,7 @@ $app = new Illuminate\Foundation\Application;
 */
 
 $env = $app->detectEnvironment(array(
-
-	'development' => array('Shredportable'),
-	'production' => array('dehrg.com')
-
+	'development' => array('Shredportable')
 ));
 
 /*
