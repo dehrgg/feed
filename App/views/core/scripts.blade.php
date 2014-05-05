@@ -5,9 +5,9 @@
     <script src="{{ asset($script['internal']) }}"></script>
   @endif
 
-  @if( isset($script['failsafe']) && isset($script['check']) )
+  @if( isset($script['conditional']) && isset($script['check']) )
     <script>
-      window.{{$script['check']}} || document.write("\x3Cscript src=\"{{ asset($script['failsafe']) }}\">\x3C/script>");
+      window.{{$script['check']}} || document.write("\x3Cscript src=\"{{ asset($script['conditional']) }}\">\x3C/script>");
     </script>
   @endif
 @endforeach
