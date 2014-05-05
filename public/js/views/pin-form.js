@@ -14,6 +14,9 @@ app.views.PinDialog = Backbone.View.extend({
 
 	render: function() {
 		this.$form.html(this.template.render(this.model.toJSON()));
+		if (window.jscolor) {
+			jscolor.color($(app.selectors.pinColor)[0], {hash: true});
+		}
 	},
 
 	saveChanges: function() {

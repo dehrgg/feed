@@ -195,6 +195,10 @@
 	padding: 2px 4px;
 }
 
+.pin-color-input[readonly] {
+	cursor: pointer;
+}
+
 .welcome-msg {
 	text-align: center;
 }

@@ -15,7 +15,8 @@ window.app = (function() {
 		content: '.page-content',
 		emptyMessage: '.empty-message',
 		feedItem: '.feed-item',
-		feedlistItem: '.feedlist-item'
+		feedlistItem: '.feedlist-item',
+		pinColor: '#pin-color'
 	};
 
 	devRoot = '/Dehrg/public_html/Text/Feed/public';
