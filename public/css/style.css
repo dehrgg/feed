@@ -208,3 +208,13 @@
 		margin-top: 10px;
 	}
 }
+
+.forgot {
+	margin-left: 15px;
+	vertical-align: middle;
+}
+
+.label-form {
+	font-weight: normal;
+	font-size: 90%;
+}

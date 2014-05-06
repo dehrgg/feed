@@ -21,4 +21,6 @@ return array(
 
 	"sent" => "Password reminder sent!",
 
+	"subject" => 'Your account at Dehrg.com'
+
 );

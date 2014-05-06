@@ -16,7 +16,15 @@ Route::group(array('before' => 'guest'), function(){
 	Route::get('login', array('uses' => 'App\Controllers\HomeController@showLogin'));
 	Route::get('signup', array('uses' => 'App\Controllers\HomeController@showSignup'));
 });
-
+/*
+|--------------------------------------------------------------------------
+| Password Reminders
+|--------------------------------------------------------------------------
+ */
+Route::get('password/remind', array('uses' => 'App\Controllers\RemindersController@getRemind'));
+Route::post('password/remind', array('uses' => 'App\Controllers\RemindersController@postRemind'));
+Route::get('password/reset/{token}', array('uses' => 'App\Controllers\RemindersController@getReset'));
+Route::post('password/reset', array('uses' => 'App\Controllers\RemindersController@postReset'));
 
 /*
 |--------------------------------------------------------------------------

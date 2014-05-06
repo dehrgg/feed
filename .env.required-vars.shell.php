@@ -18,7 +18,11 @@ return array(
 	'URL_ROOT' => '',		// Points to the root of the application installation
 	'PARENT_ROOT'  => '',	// Points to the root of the website hosting this application, not the app itself.
 	'DEBUG_ON' => true,		// enable debugging for the application
-	'ENCRYPTION_KEY' => ''  // a random, 32 character string
+	'ENCRYPTION_KEY' => '', // a random, 32 character string,
+	'MAIL_HOST' => '',	// smtp server for sent mail
+	'MAIL_FROM'	  => array('address' => '', 'name' => ''), 	// smtp sender details
+	'MAIL_PASSWORD' => '',	// smtp password
+	'MAIL_USER'		=> '',	// smtp username
 );
 
 ?>
