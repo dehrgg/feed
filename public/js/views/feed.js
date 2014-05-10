@@ -77,7 +77,9 @@ app.views.Feed = Backbone.View.extend({
 	},
 
 	pinFeed: function() {
-		this.model.set({'name': app.stripHTML(this.model.get('name'))});
+		this.model.set({
+			'name': $.trim(app.decodeHTML(this.model.get('name')))
+		});
 		app.setAjaxMessage('Pinning feed');
 		this.model.save().done($.proxy(this.pinComplete, this));
 	},
@@ -103,7 +105,7 @@ app.views.Feed = Backbone.View.extend({
 		_.each(lists, function(list){
 			var feedCopy = new app.models.Feed({
 				url: this.model.get('url'),
-				name: app.stripHTML(this.model.get('name'))
+				name: $.trim(app.decodeHTML(this.model.get('name')))
 			});
 			list.createFeed(feedCopy);
 		}, this);

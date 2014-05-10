@@ -35,6 +35,12 @@ window.app = (function() {
 		return text.replace(tagRegex, '');
 	};
 
+	app.decodeHTML = function(text) {
+		var div = document.createElement('div');
+		div.innerHTML = text;
+		return div.innerText;
+	};
+
 	var ajaxMessage = '';
 	var ajaxSpinner = $('#ajax-modal');
 

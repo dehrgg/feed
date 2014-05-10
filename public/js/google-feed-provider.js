@@ -4,9 +4,9 @@ window.GoogleFeedProvider = function() {
 	var _mapEntries = function(entries) {
 		return _.map(entries, function(entry){
 			return new app.models.Feed({
-				name: app.stripHTML(entry.title, true),
+				name: entry.title,
 				url: entry.url,
-				snippet: app.stripHTML(entry.contentSnippet, true),
+				snippet: entry.contentSnippet,
 				link: entry.link
 			});
 		});
