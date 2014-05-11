@@ -40,10 +40,10 @@
       @include('core.demonav')
     </div>
     <div class="row">
-      <div class="col-sm-4 col-md-3 sidebar">
+      <div class="col-sm-4 col-md-3 col-lg-2 sidebar">
         @include('core.sidemenu')
       </div>
-      <div class="col-sm-8 col-md-8 page-content">
+      <div class="col-sm-8 col-md-9 col-lg-9 page-content">
 	      @yield('content')
       </div>
     </div>
