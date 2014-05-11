@@ -5,7 +5,7 @@
 | Application Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/', array('uses' => 'App\Controllers\HomeController@showWelcome'));
+Route::get('/', array('uses' => 'App\Controllers\FeedlistController@index'));
 Route::get('welcome', array('uses' => 'App\Controllers\HomeController@showWelcome'));
 Route::post('login', array('uses' => 'App\Controllers\HomeController@doLogin'));
 Route::post('logout', array(
