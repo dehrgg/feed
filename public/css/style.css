@@ -1,3 +1,8 @@
+.dg-logo {
+	padding: 0 15px;
+	max-height: 48px;
+}
+
 .has-error .form-control::-webkit-input-placeholder {
 	color: #a94442;
 } 
