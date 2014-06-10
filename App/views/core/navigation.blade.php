@@ -11,13 +11,13 @@
  		<div class="collapse navbar-collapse" id="nav-collapse">
 	 		<ul class="nav navbar-nav">
 	 			<li>
-	 				<a href="{{ $_ENV['PARENT_ROOT'] }}/about">About</a>
+	 				<a href="{{ $_ENV['PARENT_ROOT'] }}#about">About</a>
 	 			</li>
 	 			<li class="{{{ $active === 'portfolio' ? 'active' : '' }}}">
-	 				<a href="{{ $_ENV['PARENT_ROOT'] }}/portfolio">Projects</a>
+	 				<a href="{{ $_ENV['PARENT_ROOT'] }}#projects">Projects</a>
 	 			</li>
 	 			<li>
-	 				<a href="{{ $_ENV['PARENT_ROOT'] }}/portfolio">Resume</a>
+	 				<a href="{{ $_ENV['PARENT_ROOT'] }}#resume">Resume</a>
 	 			</li>
 	 		</ul>
  		</div>

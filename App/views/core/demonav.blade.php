@@ -2,7 +2,7 @@
  	<!-- <div class="container-fluid"> -->
  		<ol class="breadcrumb pull-left nav-breadcrumb">
   			<li><a href="{{ $_ENV['PARENT_ROOT'] }}">Home</a></li>
-  			<li><a href="{{ $_ENV['PARENT_ROOT'] }}/portfolio/demos">Demos</a></li>
+  			<li><a href="{{ $_ENV['PARENT_ROOT'] }}#projects">Projects</a></li>
 		  	<li class="active">Feed</li>
 		</ol>
  		<div class="navbar-collapse collapse in">
