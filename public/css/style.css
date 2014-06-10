@@ -68,6 +68,14 @@
 	border-bottom-left-radius: 4px;
 }
 
+.sidebar {
+	float:left;
+}
+
+.page-content {
+	padding: 20px;
+}
+
 .main-nav {
 	border-top-right-radius: 4px;
 	border-top-left-radius: 4px;
@@ -116,7 +124,7 @@
 	top: 2px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
 	.sidenav > .sidenav-item {
 		float:none;
 	}
@@ -129,9 +137,13 @@
 	.sidenav {
 		min-width: 147px;
 	}
+
+	.page-content {
+		overflow: hidden;
+	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 	.sidenav {
 		margin-bottom: 10px;
 	}
@@ -222,4 +234,8 @@
 .label-form {
 	font-weight: normal;
 	font-size: 90%;
+}
+
+.dog-img {
+	max-width: 450px;
 }

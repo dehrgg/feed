@@ -11,6 +11,6 @@
 			If a bad link brought you here <a href="mailto:dylan@dehrg.com"> let me know </a>
 			</p>
 		</span>
-		<img src="{{ asset('img/dog.jpg') }}" class="img-responsive col-xs-12 col-md-6">
+		<img src="{{ asset('img/dog.jpg') }}" class="img-responsive dog-img col-xs-12 col-md-6">
 	</div>
 @stop
