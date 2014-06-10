@@ -107,6 +107,8 @@ class FeedlistController extends BaseController {
 			foreach ($list->pins as $pin) {
 				$response = $this->feedReader->loadFeed($pin->feed->url);
 				$response['entries'] = array_map(function($entry) use ($pin) {
+					$date = new DateTime($entry['publishedDate']);
+					$entry['formattedDate'] = date_format($date, 'D, d M Y g:ia');
 					return array_add($entry, 'pin', $pin->toArray());
 				}, $response['entries'] );
 				$allEntries = array_merge($allEntries, $response['entries'] );
